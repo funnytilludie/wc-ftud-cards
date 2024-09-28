@@ -1,0 +1,105 @@
+/************** CHECKOUT STYLING **************/
+
+.woocommerce-info {
+    border-top-color: #c10100;
+}
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    background-color: #2a2a2a;
+    color: #ededed;
+}
+
+
+/********** CUSTOM CARD ON CHECKOUT ***********/
+.ftud-cart-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ftud-cart-product-card {
+    /* flex: 1 1 calc(33.333% - 20px); /* DEFAULT */
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(33.333% - 20px);
+}
+
+/* Responsiveness */ 
+@media screen and (max-width: 980px) {
+    .ftud-cart-product-card {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .ftud-cart-product-card {
+        width: 100%;
+    }
+}
+
+
+
+
+.ftud-cart-product-card img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.ftud-cart-product-details h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.ftud-cart-product-details .ftud-cart-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Remove button (X icon) */
+.ftud-remove-product {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.ftud-remove-from-cart {
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    background-color: rgb(0 0 0 / 68%);
+    padding: 10px 18px;
+    border-radius: 34px;
+    text-decoration: none !important;
+}
+
+.ftud-remove-from-cart:hover {
+    color: rgb(240, 112, 112) !important;
+    background-color: #000;
+}
+
+/*************** END CUSTOM CART ON CHECKOUT *****************/
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+    background: #000000;
+}
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+    background-color: #580a0a;
+}
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+    /* border: 1em solid #580a0a; */
+}
+
+button#place_order {
+    background: green;
+    padding: 20px 30px;
+}
+
+/*** Checkout Button styling   ***/
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+    float: left;
+}

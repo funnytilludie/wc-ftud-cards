@@ -31,9 +31,11 @@ class Shortcode {
         // Set default number of products to display
         $args = array(
             'post_type' => 'product',
+            'post_status' => 'publish',
             'posts_per_page' => 24, // 24 products initially
             'orderby' => 'date',
             'order' => 'DESC',
+
         );
 
         $products = new \WP_Query($args);
@@ -70,6 +72,7 @@ class Shortcode {
 
         $args = array(
             'post_type' => 'product',
+            'post_status' => 'publish',
             'posts_per_page' => 24,
             'paged' => $paged,
             'orderby' => 'date',

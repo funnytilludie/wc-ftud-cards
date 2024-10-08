@@ -43,8 +43,8 @@ add_action('wp_enqueue_scripts', 'ftud_enqueue_product_cards_assets', 20);
 function ftud_enqueue_product_cards_assets() {
     global $plugin_version;
 
-    wp_enqueue_style('jquery-modal-css', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css');
-    wp_enqueue_script('jquery-modal-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', array('jquery'), null, true);
+    wp_enqueue_style('jquery-modal-css', plugins_url('lib/jquery-modal/jquery.modal.min.css', __FILE__), array(), $plugin_version);
+    wp_enqueue_script('jquery-modal-js', plugins_url( 'lib/jquery-modal/jquery.modal.min.js', __FILE__), array('jquery'), $plugin_version, true);
 
     // Enqueue CSS with versioning
     wp_enqueue_style('ftud-product-cards-css', plugins_url('assets/css/product-cards.css', __FILE__), array(), $plugin_version);

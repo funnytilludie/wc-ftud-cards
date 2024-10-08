@@ -152,6 +152,8 @@ button#ftud-load-more:hover {
     padding: 0;
     background: none;
     max-width: 700px;
+    overflow: hidden !important;
+    position: relative !important;
 }
 
 .modal .ftud-product-modal-content img {
@@ -163,6 +165,10 @@ button#ftud-load-more:hover {
     padding: 10px 20px;
     color: white;
     text-align: center;
+}
+
+.jquery-modal.blocker {
+    z-index: 10;
 }
 
 /* Responsive Design */

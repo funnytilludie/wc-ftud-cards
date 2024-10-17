@@ -41,9 +41,6 @@
     }
 }
 
-
-
-
 .ftud-cart-product-card img {
     max-width: 100%;
     margin-bottom: 15px;
@@ -83,6 +80,15 @@
 }
 
 /*************** END CUSTOM CART ON CHECKOUT *****************/
+
+.checkout-dnft-info {
+    margin: 30px 0;
+    border: 1px solid #ed2023;
+    padding: 25px 15px;
+    font-weight: bold;
+    background: rgb(237, 32, 35);
+    background: linear-gradient(0deg, rgba(237, 32, 35, 0.22172619047619047) 0%, rgba(0, 0, 0, 1) 100%);
+}
 
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
     background: #000000;

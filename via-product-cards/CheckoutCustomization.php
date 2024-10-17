@@ -15,6 +15,7 @@ class CheckoutCustomization {
 
     public function __construct() {
         add_filter('woocommerce_checkout_fields', array($this, 'customize_checkout_fields'));
+        add_action('woocommerce_checkout_before_customer_details', array($this, 'add_custom_message_above_checkboxes'));
         // Commercial Agreement checkbox
         add_action('woocommerce_checkout_after_terms_and_conditions', array($this, 'add_commercial_agreement_checkbox'));
         add_action('woocommerce_checkout_process', array($this, 'validate_commercial_agreement_checkbox'));
@@ -115,5 +116,10 @@ class CheckoutCustomization {
         }
     
         wp_die();
+    }
+
+    // Add custom message above checkboxes
+    public function add_custom_message_above_checkboxes() {
+        echo '<div class="checkout-dnft-info"><ul><li>dNFTs will be delivered by December 16, 2024</li><li>dNFT owners will be able to "NAME" their Clown through the Upgrade process.</li></ul></div>';
     }
 }
